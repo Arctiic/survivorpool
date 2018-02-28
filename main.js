@@ -3,8 +3,7 @@ _$ = (n) => {
 }
 
 calc = (pot, round, winners) => {
-  round = 2;
-  return ((((pot - (pot % 6)) / 6) * round) - ((((pot - (pot % 6)) / 6) * round) % winners)) / winners;
+  return ((Math.floor(pot / 300)) - ((((pot - (pot % 6)) / 6) * round) % winners)) / winners;
 }
 
 submit = () => {
